@@ -5,38 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <link rel="stylesheet" href="../static/css/index-o.css">
+    <link rel="stylesheet" href="../static/css/output.css">
     <link rel="icon" href="../static/img/favicon.svg" type="image/svg+xml">
     <title>Шышульбук</title>
 </head>
 
 <body class="bg-neutral-800 *:px-12 text-white font-montserrat" x-data="{ isDebug: false }"
     :class="isDebug ? '**:outline' : ''">
-    <header
-        class="flex sticky h-15 mt-5 mx-10 bg-neutral-900/40 justify-between items-center border border-white/20 rounded-full backdrop-blur-2xl">
-        <a href="#"
-            class="flex items-center gap-3 mr-auto hover:bg-neutral-700/40 transition-colors duration-150 rounded-full px-4 py-2">
-            <span class="material-symbols-outlined">school</span>
-            <span>Школа</span>
-        </a>
-        <nav
-            class="flex gap-5 mx-auto *:hover:bg-neutral-700/40 *:transition-colors *:duration-150 *:rounded-full *:px-4 *:py-2">
-            <a href="#">Дневник</a>
-            <a href="#" @click="isDebug = !isDebug">Главная</a>
-            <a href="#">Замены</a>
-        </nav>
-        <a href="#"
-            class="flex items-center gap-3 ml-auto hover:bg-neutral-700/40 transition-colors duration-150 rounded-full px-4 py-2">
-            <span>Профиль</span>
-            <span class="material-symbols-outlined">account_circle</span>
-        </a>
+    <header class="px-10 py-5">
+        <div
+            class="sticky grid grid-cols-3 h-15 px-5 bg-neutral-900/40 items-center border border-white/20 rounded-full backdrop-blur-2xl">
+            <a href="school.html"
+                class="flex items-center gap-3 justify-self-start hover:bg-neutral-700/40 transition-colors duration-150 rounded-full px-4 py-2">
+                <span class="material-symbols-outlined">school</span>
+                <span>Школа</span>
+            </a>
+            <nav
+                class="flex gap-5 justify-self-center *:hover:bg-neutral-700/40 *:inline-block *:w-30 *:px-4 *:py-2 *:text-center *:transition-colors *:duration-150 *:rounded-full">
+                <a href="#">Дневник</a>
+                <a href="#" @click="isDebug = !isDebug">Главная</a>
+                <a href="#">Замены</a>
+            </nav>
+            <a href="#"
+                class="flex items-center gap-3 justify-self-end hover:bg-neutral-700/40 transition-colors duration-150 rounded-full px-4 py-2">
+                <span>Профиль</span>
+                <span class="material-symbols-outlined">account_circle</span>
+            </a>
+        </div>
     </header>
-    <main class="flex flex-col items-center mt-25">
+    <main class="flex flex-col items-center py-20">
         <img src="../static/img/favicon.svg" alt="Логотип" class="mx-auto size-100">
-        <h1 class="text-5xl font-bold text-center mt-5">Шышульбук</h1>
+        <h1 class="text-5xl font-bold text-center">Шышульбук</h1>
         <p class="text-lg text-center mt-5">Инструмент для управления учебным процессом</p>
-        <a href="#"
-            class="bg-white mt-10 px-8 py-4 rounded-full text-black text-lg hover:bg-gray-200 transition-colors duration-150">Перейти к школе</a>
+        <a href="school.html"
+            class="bg-white mt-15 px-8 py-4 rounded-full text-black text-lg hover:bg-gray-200 transition-colors duration-150">Перейти
+            к школе</a>
     </main>
 </body>
 

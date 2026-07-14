@@ -4,6 +4,6 @@
     "tailwindcss": "^4.3.2"
   },
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i app/static/css/index-i.css -o app/static/css/index-o.css --watch --minify"
+    "dev": "npx @tailwindcss/cli -i app/static/css/styles.css -o app/static/css/output.css --watch --minify"
   }
 }
