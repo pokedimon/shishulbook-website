@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
+    <title>Шышульбук</title>
+</head>
+
+<body class="bg-neutral-800 *:px-12 text-white font-montserrat" x-data="{ isDebug: false }"
+      :class="isDebug ? '**:outline' : ''">
+<header class="px-10 py-5">
+    <div
+            class="sticky grid grid-cols-3 h-15 px-5 bg-neutral-900/40 items-center border border-white/20 rounded-full backdrop-blur-2xl">
+        <a href="#"
+           class="flex items-center gap-3 justify-self-start hover:bg-neutral-700/40 transition-colors duration-150 rounded-full px-4 py-2">
+            <span class="material-symbols-outlined">school</span>
+            <span>Школа</span>
+        </a>
+        <nav
+                class="flex gap-5 justify-self-center *:hover:bg-neutral-700/40 *:inline-block *:w-30 *:px-4 *:py-2 *:text-center *:transition-colors *:duration-150 *:rounded-full">
+            <a href="#">Дневник</a>
+            <a href="#" @click="isDebug = !isDebug">Главная</a>
+            <a href="#">Замены</a>
+        </nav>
+        <a href="#"
+           class="flex items-center gap-3 justify-self-end hover:bg-neutral-700/40 transition-colors duration-150 rounded-full px-4 py-2">
+            <span>Профиль</span>
+            <span class="material-symbols-outlined">account_circle</span>
+        </a>
+    </div>
+</header>
+{% block content %}{% endblock %}
+</body>
+
+</html>
